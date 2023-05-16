@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-widtch, initial-scale=1.0" />
+    <meta name="keywords" content="ключевые слова" />
+    <meta name="description" content="описание" />
+    <meta name="author" content="Mikhail" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>название</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="container">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="#">
+                        <li>Home</li>
+                    </a>
+                    <a href="#">
+                        <li>About</li>
+                    </a>
+                    <a href="#">
+                        <li>Info</li>
+                    </a>
+                    <a href="#">
+                        <li>Contact</li>
+                    </a>
+                    <a href="https://erikterwan.com/" target="_blank">
+                        <li>Show me more</li>
+                    </a>
+                </ul>
+            </div>
+            <nav class="header__nav">
+                <ul class="site__navigation">
+                    <li class="site__navigation--item">
+                        <a href="index.html" class="site__navigation--link">Главная</a>
+                    </li>
+                    <li class="site__navigation--item">
+                        <a href="order.html" class="site__navigation--link">Заказать печать наклеек</a>
+                    </li>
+
+                    <li class="site__navigation--item">
+                        <a href="contacts.html" class="site__navigation--link">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="header__contact--register">
+                    <li class="header__contact--list">
+                        <a href="user.html" class="header__contact--user"><img src="./images/profile.svg" alt="профиль"></li>
+                    <li class="header__contact--list">
+                        <a href="basket.html" class="header__contact--user"><img src="./images/basket.svg" alt="корзина"></li>
+                </ul>
+                <ul class="header__contacts--social">
+                    <li class="header__contacts--item">
+                        <a href="#" class="header__contacts--link"><img src="./images/vk.svg" alt="Instagram" class="header__contacts--img" /></a>
+                    </li>
+                </ul>
+                <button class="header__btn">Заказать звонок</button>
+                <div class="menu-burger__header">
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__item">
+                        <h1 class="hero__title">Мы любим печатать наклейки и делаем это лучше всех!</h1>
+                        <p class="hero__text">Удобный онлайн заказ, высокое качество и быстрая доставка</p>
+                        <button class="hero__btn"><img src="./images/arrow.svg" alt="стрелка" class="hero__btn--img">Сделать заказ</button>
+                    </div>
+                    <div class="hero__img">
+                        <img src="./images/2.png" alt="логотип наклеек" class="hero__foto">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="order" id="order">
+            <div class="container">
+                <form action="#" class="form__body" id="form" onsubmit="send(event, 'send.php')">
+                    <h2 class="order__title">Расчет стоимости и оформление заказа</h2>
+                    <div class="form__label">
+                        <div class="label__list">
+                            <img src="./images/form_one.png" alt="цифра один" class="label__img">
+                            <h4 class="label__title">Выберете фото</h4>
+                        </div>
+                        <div class="form__file">
+                            <div class="file__item">
+                                <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
+                                <div class="file__btn">Выбрать фото</div>
+                            </div>
+                            <div id="formPreview" class="file__preview"></div>
+                        </div>
+                        <div class="label__list">
+                            <img src="./images/form_two.png" alt="цифра два" class="label__img">
+                            <h4 class="label__title">Выберите размер (см)</h4>
+                        </div>
+                        <div class="rabs" id="width">
+                            <input type="radio" id="tab-1" name="size" checked>
+                            <label for="tab-1">5 x 5 см</label>
+                            <input type="radio" id="tab-2" name="size">
+                            <label for="tab-2">10 x 10 см</label>
+                            <input type="radio" id="tab-3" name="size">
+                            <label for="tab-3">20 x 20 см</label>
+                            <input type="radio" id="tab-4" name="size">
+                            <label for="tab-4">30 x 30 см</label>
+                            <input type="radio" id="tab-5" name="size">
+                            <label for="tab-5">40 x 40 см</label>
+                            <input type="radio" id="tab-5" name="size">
+                        </div>
+                        <div class="label__list">
+                            <img src="./images/form__three.png" alt="цифра три" class="label__img">
+                            <h4 class="label__title">Выберите материал</h4>
+                        </div>
+                        <div class="mat">
+                            <input type="radio" id="mat-1" name="mat" checked>
+                            <label for="mat-1">Белая пленка</label>
+                            <input type="radio" id="mat-2" name="mat">
+                            <label for="mat-2">Прозрачная пленка</label>
+                            <input type="radio" id="mat-3" name="mat">
+                            <label for="mat-3">Голографическая пленка</label>
+                        </div>
+                        <div class="label__list">
+                            <img src="./images/form__four.png" alt="цифра четыре" class="label__img">
+                            <h4 class="label__title">Тираж</h4>
+                        </div>
+                        <div class="tir">
+                            <input type="radio" id="tir-1" name="tir" checked>
+                            <label for="tir-1">10</label>
+                            <input type="radio" id="tir-2" name="tir">
+                            <label for="tir-2">50</label>
+                            <input type="radio" id="tir-3" name="tir">
+                            <label for="tir-3">100</label>
+                            <input type="radio" id="tir-4" name="tir">
+                            <label for="tir-4">200</label>
+                            <input type="radio" id="tir-5" name="tir">
+                            <label for="tir-5">300</label>
+                            <input type="radio" id="tir-6" name="tir">
+                            <label for="tir-6">500</label>
+                            <input type="radio" id="tir-7" name="tir">
+                            <label for="tir-7">1000</label>
+                        </div>
+                        <div class="label__list">
+                            <img src="./images/form_five.png" alt="цифра пять" class="label__img">
+                            <h4 class="label__title">Покрытие</h4>
+                        </div>
+                        <div class="cover">
+                            <input type="radio" id="cov-1" name="cov" checked>
+                            <label for="cov-1">Белая пленка</label>
+                            <input type="radio" id="cov-2" name="cov">
+                            <label for="cov-2">Прозрачная пленка</label>
+                        </div>
+                        <div class="form__price">
+                            <p class="form__price-title">Стоимость вашего заказа:<span class="form__price-bold">  руб.</span>
+                            </p>
+                        </div>
+                        <div class="form__footer">
+                            <h4 class="form__footer-title">Дополнительная информация</h4>
+                            <div class="form__list">
+                                <div class="form__list-left">
+                                    <div class="form__item">
+                                        <label for="formName" class="form__label"></label>
+                                        <input id="formName" type="text" name="name" class="form__input" placeholder="Имя">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="formEmail" class="form__label"></label>
+                                        <input id="formEmail" type="text" name="email" class="form__input" placeholder="E-mail">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="formTell" class="form__label"></label>
+                                        <input id="formTell" type="text" name="tell" class="form__input" placeholder="Телефон">
+                                    </div>
+                                </div>
+                                <div class="form__list-right">
+                                    <div class="form__item">
+                                        <label for="formAdres" class="form__label"></label>
+                                        <textarea id="formAdres" name="message" class="form__input-message" placeholder="Адрес"></textarea>
+                                    </div>
+                                    <div class="form__list-footer">
+                                        <div class="form__item">
+                                            <label for="formMessage" class="form__label"></label>
+                                            <textarea id="formMessage" name="message" class="form__input-coment" placeholder="Сообщение"></textarea>
+                                        </div>
+                                        <div class="form__item">
+                                            <label for="formData" class="form__label"></label>
+                                            <input id="formData" type="number" name="data" class="form__input-data" placeholder="Дата доставки">
+                                        </div>
+                                        <div class="form__item">
+                                            <label for="formTime" class="form__label"></label>
+                                            <input id="formTime" type="number" name="time" class="form__input-data" placeholder="Время">
+                                        </div>
+                                        <div class="form__item">
+                                            <div class="checkbox">
+                                                <input id="politics" class="checkbox__input" type="checkbox" name="agreement" onclick="check();" value="" autocomplete="off">
+                                                <label for="politics" class="checkbox__label">Я ознакомлен и согласен с политикой конфиденциальности</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <input name="submit" disabled="" class="form__btn" type="submit" value="Добавить в корзину">
+                            </div>
+                        </div>
+                </form>
+                </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__wrap-contact">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="tel:+79871281285" class="footer__caal">+7(987)-128-12-85</a></li>
+                        <li class="footer_item"><a href=" mailto:info@вашакомпания" class="footer__mail">info@вашакомпания</a></li>
+                    </ul>
+                </div>
+                <div class="form__wrap-form">
+                    <h2 class="footer__title">ЕСЛИ У ВАС ЕСТЬ КАКОЙ-ТО ВОПРОС, ОСТАВЬТЕ ВАШ ТЕЛЕФОН И МЫ ВАМ СРАЗУ ЖЕ ПЕРЕЗВОНИМ</h2>
+                    <form class="form__box-tel" method="post">
+                        <input name="phone" class="form__box-number" type="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Номер телефона">
+                        <input name="phone_submit" class="form__box-btn" type="submit" value="Отправить">
+                    </form>
+                </div>
+            </div>
+            <div class="footer__copy-link">
+                <div class="footer__copyright">
+                    <p class="footer__copyright-text">ВАША КОМПАНИЯ @2023</p>
+                </div>
+                <ul class="footer__item">
+                    <li><a href="#" class="footer-items-link">Как мы работаем</a></li>
+                    <li><a href="#" class="footer-items-link">Цены</a></li>
+                    <li><a href="#" class="footer-items-link">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
+</body>
+
+</html>
